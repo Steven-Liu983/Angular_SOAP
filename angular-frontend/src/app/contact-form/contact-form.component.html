@@ -1,0 +1,9 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name: </label>
+  <input id="name" formControlName="name" required>
+  <br><br>
+  <label for="email">Email: </label>
+  <input id="email" formControlName="email" type="email" required>
+  <br><br>
+  <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+</form>
